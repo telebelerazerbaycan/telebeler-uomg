@@ -369,4 +369,27 @@ a::after {
   height: 1px;
   background-color: #5c89d6;
   transition: 0.4s;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.info {
+  padding-block: 70px 0;
+}
+
+.we_title {
+  font-family: "Afacad Flux";
+  font-size: 16px;
+}
+
+.telebeaze {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.telebeaze img {
+  width: 100%;
+}
+
+
+/*# sourceMappingURL=style.css.map */
