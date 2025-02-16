@@ -1,12 +1,9 @@
-const openBar = document.querySelector(".bars");
-const navList = document.querySelector(".mobilMenu");
-const mainList = document.querySelector(".main_lang");
-const difLang = document.querySelector(".mobil_lang");
-openBar.addEventListener("click", () =>{
-    navList.classList.toggle("active");
-});
-mainList.addEventListener("click", () => {
-    difLang.classList.toggle("active");
+// Mobil Nav
+const mobilSideBar = document.querySelector('.sidebar');
+const mobilMenu = document.querySelector('.mobilnav');
+
+mobilSideBar.addEventListener('click', function(){
+    mobilMenu.classList.toggle('active');
 });
 
 // Swiper
