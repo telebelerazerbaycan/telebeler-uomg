@@ -1,110 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="website icon" type="jpg" href="./img/telebe.JPG">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Yuji+Mai&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Ana Səhifə</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./fonts/FTN65.woff">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Home</title>
 </head>
+
 <body>
-  <header>
-        <section class="headss">
+    <div id="loading">
+        <dotlottie-wc src="https://lottie.host/7e4f5034-0f70-45fb-afcf-932c23d84321/8HD2y8lfjN.lottie"
+            style="width: 300px;height: 300px" autoplay loop></dotlottie-wc>
+    </div>
+    <canvas id="karCanvas"></canvas>
+    <header>
+        <section id="top">
             <div class="container">
-                <div class="head_boxes">
-                    <h2><a href=""><i class="fa-solid fa-graduation-cap"></i>
-                            Tələbələr ÜOMG</a></h2>
-                    <nav>
-                        <div class="sidebar">
-                            <div class="div1"></div>
-                        </div>
-                        <ul class="desktop">
-                            <!-- As soon as -->
-                        </ul>
+                <div class="h_boxes">
+                    <a class="h_logo" href="#">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <p style="font-weight: 800;">Tələbələr</p>
+                    </a>
+                    <div class="h_bar">
+                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                    </div>
 
-                        <ul class="mobilnav">
-                            <li>
-                                <a href="./">Ana Səhifə</a>
-                            </li>
-                            <li>
-                                <a href="page/about.html">Haqqımızda</a>
-                            </li>
-                            <li>
-                                <a href="">Dəstək</a>
-                            </li>
-                            <li>
-                                <a href="https://t.me/+WUKxtnDjo2E5YTcy">Bizə Qoşulun</a>
-                            </li>
-                            <li class="langs">
-                                <a href="/">
-                                    <img src="img/aze.png" alt="aze_flag">
-                                    <span>AZE</span>
-                                </a>
-                                <a href="page/homeru.html">
-                                    <img src="img/russia.png" alt="ru_flag">
-                                    <span>RU</span>
-                                </a>
+                    <nav class="navbar">
+                        <ul class="comp">
+                            <li class="dropdown_title">
+                                <span>Ana Səhifə</span>
                             </li>
 
-                            <li class="mobil_class">
-                                <a href="#">
-                                    <i class="fa-brands fa-telegram"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
+                            <li class="dropdown_title">
+                                <span>Haqqımızda</span>
+                            </li>
+
+                            <li class="dropdown_title">
+                                <a href="https://t.me/the_karayeff">Dəstək</a>
+                            </li>
+
+                            <li class="dropdown_title">
+                                <a href="https://t.me/+WUKxtnDjo2E5YTcy">Bizə qoşulun</a>
                             </li>
 
                         </ul>
                     </nav>
+                    <div class="mobile">
+                        <div class="mobile_title">
+                            <p>Menyu</p>
+                            <span class="close"><i class="fa-solid fa-xmark" aria-hidden="true"></i></span>
+                        </div>
+                        <ul class="overflow">
+                            <li>
+                                <p onclick="toggleAccordion(1)" class="accordion-header">
+                                    <a href="">Ana Səhifə</a>
+                                </p>
+
+                            </li>
+
+                            <li>
+                                <p onclick="toggleAccordion(2)" class="accordion-header">
+                                    <a href="">Haqqımızda</a>
+                                </p>
+
+                            </li>
+
+                            <li>
+                                <p onclick="toggleAccordion(3)" class="accordion-header">
+                                    <a href="#">Dəstək</a>
+
+                                </p>
+
+                            </li>
+
+                            <li>
+                                <p onclick="toggleAccordion(4)" class="accordion-header">
+                                    <a href="#">Bizə Qoşulun</a>
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="m_social">
+                            <div class="socials"><a href="#"><i class="fa-brands fa-telegram"></i></a></div>
+                            <div class="socials"><a href="#"><i class="fa-brands fa-instagram"
+                                        aria-hidden="true"></i></a></div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </header>
-
-   
     <main>
-        <section class="main_page">
+        <section id="boxes">
             <div class="container">
-                <div class="shareboxes">
-                    <div class="sharetitle">
+                <div class="boxs">
+                    <div class="header_title">
                         <p>Bütün tələbələr qrupumuza dəvətlidir!!</p>
                     </div>
-                    <div class="sharelinks">
-                        <div class="serhed">
-                            <a href="./page/uomg.html"> ÜOMG Hesabla <i class="fa-solid fa-chevron-right"></i></a>
+                                        <div class="cards">
+
+                        <!-- 1-ci Kart: ÜOMG / Universitet -->
+                        <div class="my-card">
+                            <img src="https://telegram.org/file/400780400076/4/kvSA3r0E33I.294413.jpg/c7f2087f7f77c43bad" alt="Qışda universitet kampusu">
+                            <h3>ÜOMG Tələbələri</h3>
+                            <p>Universitet həyatı qışda da davam edir! Dərslər, qeydlər və resurslar üçün xüsusi bölmə.</p>
+                            <a href="#" class="btn">Daxil Ol →</a>
                         </div>
-                        <div class="serhed">
-                            <a href="https://t.me/+WUKxtnDjo2E5YTcy">Bizə Qoşulun <i class="fa-solid fa-chevron-right"></i></a>
+
+                        <!-- 2-ci Kart: Telegram Qrupu -->
+                        <div class="my-card card-telegram">
+                            <img src="https://telegram.org/file/464001768/2/_TmSzQuqdKo.136257/515661e092c7f26dcc" alt="Telegram qrup illustrasiyası">
+                            <h3>Bizə Qoşulun</h3>
+                            <p>Söhbət, qeyd paylaşımı, sual-cavab və əyləncə üçün rəsmi Telegram qrupumuza xoş gəldin!</p>
+                            <a href="https://t.me/+WUKxtnDjo2E5YTcy" class="btn">Qrupa Qoşul →</a>
                         </div>
-                        <div class="serhed">
-                            <a href="https://t.me/the_karayeff">Dəstək <i class="fa-solid fa-chevron-right"></i></a>
+
+                        <!-- 3-cü Kart: Dəstək -->
+                        <div class="my-card card-support">
+                            <img src="https://telegram.org/file/464001365/1/haQ8RgmXkb0.85877/d12b8a89839d6950c7" alt="Qışda dəstək masası">
+                            <h3>Dəstək və Yardım</h3>
+                            <p>Probleminiz varsa tez kömək edirik! Mesaj yazın, bizə müraciət edin.</p>
+                            <a href="https://t.me/the_karayeff" class="btn">Dəstəklə Əlaqə →</a>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
     </main>
     <footer>
-       <section class="xeberdarliq">
-        <div class="container">
-            <div class="xeberdarliq_warning">
-                <div class="xeberlarliq_body">
-                    <i class="fa-solid fa-triangle-exclamation"></i>
-                    Sayt hall-hazırda beta versiyasındadır müxtəlif xətalar yarana bilər
-                </div>
-                <div class="xeberdarliq_progress"></div>
-            </div>
-        </div>
-    </section> 
-    </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </footer>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.8.11/dist/dotlottie-wc.js" type="module"></script>
     <script src="https://kit.fontawesome.com/1b28aef70a.js" crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
