@@ -441,4 +441,22 @@ canvas {
   .my-card h3 {
     font-size: 1.9rem;
   }
-}/*# sourceMappingURL=style.css.map */
+  .gpa_box{
+    padding-block: 80px;
+}
+  .secim{
+        display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: white;
+  }
+  .fennler{
+        display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .row{
+        border: 1px solid transparent;
+    outline: none;
+    margin-right: 5px;
+  }
+  /*# sourceMappingURL=style.css.map */
