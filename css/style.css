@@ -506,4 +506,24 @@ canvas {
   color:white;
   margin-top:10px;
 }
+  #stips{
+    display: flex;
+    justify-content: center;
+        display: flex;
+    flex-direction: column;
+}
+table{
+    margin-top: 20px;
+    padding: 10px;
+}
+th, td{
+    color: white;
+    padding: 15px;
+}
+tr{
+    border: 1px solid white;
+}
+td:first-child{
+border-right:1px solid white ;
+}
   /*# sourceMappingURL=style.css.map */
