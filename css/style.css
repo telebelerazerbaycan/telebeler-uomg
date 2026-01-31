@@ -469,4 +469,9 @@ canvas {
     border-radius: 20px;
     font-size: 20px;
   }
+  #netice{
+    color: red;
+    display: flex;
+    justify-content: center;
+  }
   /*# sourceMappingURL=style.css.map */
