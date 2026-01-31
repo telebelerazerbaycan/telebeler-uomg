@@ -459,4 +459,14 @@ canvas {
     outline: none;
     margin-right: 5px;
   }
+  #hesabla{
+    color: midnightblue;
+    margin-top: 20px;
+    background-color: white;
+    width: 100px;
+    justify-content: center;
+    display: flex;
+    border-radius: 20px;
+    font-size: 20px;
+  }
   /*# sourceMappingURL=style.css.map */
